@@ -33,7 +33,7 @@ const createNote = (text = '') => {
     const mainDiv = note.querySelector('.main')
     const textArea = note.querySelector('textArea')
 
-    mainDiv.textContent = text
+    mainDiv.innerHTML = marked.parse(text)
     textArea.textContent = text
 
     editBtn.addEventListener('click', () => {
